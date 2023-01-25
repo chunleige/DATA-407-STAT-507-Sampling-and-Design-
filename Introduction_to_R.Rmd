@@ -1,0 +1,184 @@
+---
+title: "Introduction to R"
+author: "Chunlei Ge"
+date: '2023-01-24'
+output:
+  pdf_document:
+    toc: yes
+    fig_height: 6
+    fig_width: 10
+    number_sections: yes
+  html_document:
+       theme: united
+       toc: true
+       toc_float: no
+       number_sections: true
+       highlight: tango
+       fig_width: 10
+       fig_height: 8
+editor_options: 
+  chunk_output_type: console
+---
+
+```{r setup, include=FALSE}
+knitr::opts_chunk$set(echo = TRUE)
+```
+
+# Learning objectives
+
+-   How to install R and Rstudio
+
+-   How to load an R package
+
+-   How to use RStudio cloud server
+
+-   How to update them
+
+-   How to run some simple calculation
+
+# R and Rstudio 
+
+## Download and install R
+
+### Windows
+
+Visit [\textcolor{blue}{R Project}](https://www.r-project.org/) to learn about R versions
+Download and install R from your preferred CRAN mirror [\textcolor{blue}{here}](https://cran.r-project.org/mirrors.html)
+Choose “0-Cloud” or a mirror site near you
+
+### Mac
+
+Check that your macOS system is up-to-date
+
+Download and install R from  [\textcolor{blue}{R Archive Network}](https://cran.r-project.org/)
+
+### Linux
+
+Download R for Linux <https://mirror.rcg.sfu.ca/mirror/CRAN/>
+
+## Download and install R studio IDE (Windows and Mac)
+
+Download and install R Studio from [\textcolor{blue}{here}](https://www.rstudio.com/products/rstudio/download/#download)
+
+## R Markdown
+
+R Markdown is a format for writing reproducible, dynamic reports with R. 
+
+R Markdown document can help us generate PDF, HTML, and other types of output with R code, results, and raw LaTeX.
+
+(This pdf file <Introduction_to_R.pdf> is the output of Rmarkdown file <Introduction_to_R.Rmd>.
+
+Feel free to open and edit it after you install Rstudio in your computer or use it as the template of your first report)
+
+Learn more at https://rmarkdown.rstudio.com/
+
+And a quick way to familiar with R Markdown https://www.rstudio.com/wp-content/uploads/2015/02/rmarkdown-cheatsheet.pdf 
+
+Some more about R studio: https://www.rstudio.com/resources/cheatsheets/
+
+## Load R package
+
+use function: $install.packages()$ to installing a package installing a Java Version : <https://www.java.com/en/download/>
+
+```{r eval=FALSE}
+install.packages("MASS")
+install.packages("rJava") 
+install.packages("RWeka")
+```
+
+Help
+
+```{r}
+help (pi)
+?pi
+# the mathematical functions ...
+?Arithmetic
+?abs
+?log
+?round
+?sin
+?Special
+```
+
+\
+
+Loading an R package
+
+```{r}
+library(MASS)
+library(rJava)
+library(RWeka)
+```
+
+## How to use RStudio cloud
+
+<https://rstudio.cloud/>
+
+## How to update
+
+### Updating R
+
+Windows\
+First Install the $installr$ package if you don't have it
+
+```{r}
+# installing/loading the package:
+if(!require(installr)) {
+  install.packages("installr"); 
+  require(installr)
+} #load / install+load installr
+```
+
+Now call $updateR()$ function to call update
+
+```{r eval=FALSE}
+updateR()
+```
+
+\
+
+macOS\
+One Mac you need to go to the CRAN website to install the newer package installer.
+
+### Updating RStudio
+
+Updating RStudio is easy, just go to $Help$ \> $Check\ for\ Updates$ to install newer version.
+
+### Updating R package
+
+Updating out of date package that were installed with $install.packages()$is easy with the $update.packages()$ function.
+
+```{r eval=FALSE}
+update.packages("MASS")
+```
+
+# Simple calculation
+
+```{r}
+x <- c(67,67,77,62,69.84,74.168,29.5,81.8,71,71,74.8)
+y <- c(170,176,172,183,167.64,175.26,165.1,177.8,170,178,176)
+
+y^2
+y+2
+y/2
+x+2
+x*x
+2*x
+x^2
+log(x)
+```
+
+# Reference
+
+Data Analysis in R. https://ubc-library-rc.github.io/data-analysis-r/
+
+&nbsp;
+
+&nbsp;
+
+&nbsp;
+
+ \center{**
+ Keep Calm and Have a Cup of Tea**}
+![tea](C:/Users/ivyge/Downloads/tea.png)
+ \center{image: https://www.expertreviews.co.uk/food-drink/1415799/best-green-tea}
