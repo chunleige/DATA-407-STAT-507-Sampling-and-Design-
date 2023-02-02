@@ -14,7 +14,7 @@ mean(my.sample) # computes the sample mean
 ?sample
 
 xbar <- c() # to initialize the object xbar
-for (i in 1:10000)  # Number of simulations
+for (i in 1:10000)  # how many times of simulations
 { 
   my.sample <- sample(Assessment,100)
   xbar[i] <- mean(my.sample)
