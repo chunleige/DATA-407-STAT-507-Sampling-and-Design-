@@ -1,7 +1,7 @@
 pop <- read.csv("Edmonton.csv", header = TRUE)
 attach(pop)
 head(pop)
-str(pop)
+str(pop)  #find N
 summary(pop)
 min(Assessment)
 max(Assessment)
@@ -16,7 +16,7 @@ mean(my.sample) # computes the sample mean
 xbar <- c() # to initialize the object xbar
 for (i in 1:10000)  # how many times of simulations
 { 
-  my.sample <- sample(Assessment,100)
+  my.sample <- sample(Assessment,100) # sample size n
   xbar[i] <- mean(my.sample)
 }
 
